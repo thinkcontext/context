@@ -29,13 +29,16 @@ echo "[-->] Installing git..."
 sudo apt-get install -y git
 
 echo "[-->] Installing latest node..."
-sudo apt-get install -y  nodejs
+sudo apt-get install -y  nodejs nodejs-legacy
+
+echo "[-->] Installing latest npm..."
+curl -L https://www.npmjs.org/install.sh | sudo sh
 
 echo "[-->] Installing latest mongodb..."
 sudo apt-get install -y mongodb-10gen
 
 echo "[-->] Installing global npm modules..."
-sudo npm -g install gulp bunyan
+sudo npm -g install bower gulp bunyan
 
 
 echo "[-->] All packages installed!"
